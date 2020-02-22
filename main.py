@@ -62,9 +62,11 @@ for tx,ty in zip(test_images,test_labels):
     tx1= tx.reshape((1,28, 28))
     tx2=tx.reshape((1,1,28,28))
     dl.write(str(np.argmax(model.predict(tx.reshape((1,28,28,1)))+0.2)))
+    dl.write(',')
     dl.write(str(ty))
     dl.write('\n')
     cnn.write(str(np.argmax(model.predict(tx.reshape((1,28,28,1))))))
+    cnn.write(',')
     cnn.write(str(ty))
     cnn.write('\n')
 
