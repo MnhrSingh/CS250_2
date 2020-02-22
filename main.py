@@ -42,7 +42,7 @@ model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accur
 fashion_mnist = keras.datasets.fashion_mnist
 (train_images, train_labels), (test_images, test_labels) = fashion_mnist.load_data()
 test_images=test_images/255.0
-model=load_model('D:\model.h5')
+model=load_model('model.h5')
 # with CustomObjectScope({'GlorotUniform': glorot_uniform()}):
 #         modeldl = load_model('D:\modeldl.h5')
 # modeldl=load_model('D:\modeldl2.h5')
